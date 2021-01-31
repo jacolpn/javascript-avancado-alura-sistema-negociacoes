@@ -4,6 +4,10 @@ class DateHelper {
     }
 
     static textoParaData(texto) {
+        // let data = new Date(this._inputData.value.split('-'));
+        // console.log(typeof(data));
+        // let helper = new DateHelper();
+
         return new Date(...texto.split('-')
             .map((item, indice) => item - indice % 2));
     }
