@@ -10,19 +10,11 @@ constructor() {
         event.preventDefault();
 
         // let data = new Date(this._inputData.value.split('-'));
-
-        let data = new Date(...
-            this._inputData.value
-                .split('-')
-                .map((item, indice) => item - indice % 2
-            )
-        );
-
-        console.log(typeof(data));
-        console.log(data);
+        // console.log(typeof(data));
+        // let helper = new DateHelper();
 
         let negociacao = new Negociacao(
-            data,
+            DateHelper.textoParaData(this._inputData.value),
             this._inputQuantidade.value,
             this._inputValor.value,
         );
